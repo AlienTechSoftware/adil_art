@@ -36,6 +36,47 @@
 
 <body>
 
+  <!-- Add this script to work-single.html -->
+  <script>
+// Wait for the DOM to be ready
+document.addEventListener('DOMContentLoaded', function() {
+  // Function to get query parameter from URL
+  function getQueryParam(name) {
+    const urlSearchParams = new URLSearchParams(window.location.search);
+    return urlSearchParams.get(name);
+  }
+
+  // Get work information from query parameters
+  var title = getQueryParam('title');
+  var category = getQueryParam('category');
+  var description = getQueryParam('description');
+  var imgSrc = getQueryParam('imgSrc');
+
+  // Update the content on the page if the elements exist
+  var titleElement = document.getElementById('work-title');
+  if (titleElement) {
+    titleElement.textContent = title;
+  }
+
+  var categoryElement = document.getElementById('work-category');
+  if (categoryElement) {
+    categoryElement.textContent = category;
+  }
+
+  var descriptionElement = document.getElementById('work-description');
+  if (descriptionElement) {
+    descriptionElement.textContent = description;
+  }
+
+  var imgElement = document.getElementById('work-image');
+  if (imgElement) {
+    imgElement.src = imgSrc;
+  }
+});
+
+  </script>
+
+
   <!-- ======= Navbar ======= -->
   <div class="collapse navbar-collapse custom-navmenu" id="main-navbar">
     <div class="container py-2 py-md-5">
@@ -91,7 +132,7 @@
         <div class="container">
           <div class="row align-items-stretch">
             <div class="col-md-8" data-aos="fade-up">
-              <img src="assets/img/img_1_big.jpg" alt="Image" class="img-fluid">
+              <img src="assets/img/img_1_big.jpg" id="work-image" alt="Image" class="img-fluid">
             </div>
             <div class="col-md-3 ml-auto" data-aos="fade-up" data-aos-delay="100">
               <div class="sticky-content">
