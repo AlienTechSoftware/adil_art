@@ -53,7 +53,10 @@
         title: 'Boxed Water',
         imgSrc: 'assets/img/img_1.jpg',
         category: 'Painting',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores illo, id recusandae molestias illum unde pariatur, enim tempora.'
+        description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores illo, id recusandae molestias illum unde pariatur, enim tempora.',
+        stores: [
+        {name:"eBay", img:"https://ir.ebaystatic.com/rs/v/fxxj3ttftm5ltcqnto1o4baovyl.png", price:"10", url:"", notes:""},
+        ]
       },
       {
         title: 'Allah',
@@ -63,7 +66,7 @@
       },
       // Add more items as needed
       {
-        title: 'Boyal Braid',
+        title: 'BoyalBraid',
         imgSrc: 'assets/img/img_4.jpg',
         category: 'Branding',
         description: 'Item 2'
@@ -88,7 +91,7 @@
         description: 'Item 2'
       },
       {
-        title: 'Ship',
+        title: 'Bismellah',
         imgSrc: 'assets/img/img_6.jpg',
         category: 'Painting',
         description: 'Item 2'
@@ -140,13 +143,15 @@
         var category = itemData.category;
         var description = itemData.description;
         var imgSrc = itemData.imgSrc;
+        var storesData = itemData.stores;
 
         // Create a URL with query parameters to pass the work information
         var url = './work-single.html?' +
           'title=' + encodeURIComponent(title) +
           '&category=' + encodeURIComponent(category) +
           '&description=' + encodeURIComponent(description) +
-          '&imgSrc=' + encodeURIComponent(imgSrc);
+          '&imgSrc=' + encodeURIComponent(imgSrc)+
+          '&stores=' + encodeURIComponent(JSON.stringify(storesData));
 
         console.log(`Navigating to ${url}`);
 
