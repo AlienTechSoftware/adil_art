@@ -83,12 +83,15 @@
         var actionCell = document.createElement('td');
   
         // Set content for the cells
-        nameCell.innerHTML = `<img src="${store.img}" alt="${store.name}" style="max-width: 50px; max-height: 50px;"><p>${store.name}</p>`;
+        // nameCell.innerHTML = `<img src="${store.img}" alt="${store.name}" style="max-width: 50px; max-height: 50px;"/><p>${store.name}</p>`;
+        nameCell.innerHTML = `<img src="${store.img}" alt="${store.name}" style="max-width: 50px; max-height: 50px;"/>`;
+
         priceCell.innerHTML = `<p>$${store.price}</p>`;
         
         // Create the buy link
         var buyLink = document.createElement('a');
         buyLink.href = store.url;
+        buyLink.className = "readmore";
         buyLink.textContent = 'Buy on ' + store.name;
         actionCell.appendChild(buyLink);
   
@@ -159,8 +162,8 @@
       <div class="container">
         <div class="row mb-4 align-items-center">
           <div class="col-md-6" data-aos="fade-up">
-            <h2>Work Single Page</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam necessitatibus incidunt ut officiis explicabo inventore.</p>
+            <!-- <h2>Work Single Page</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam necessitatibus incidunt ut officiis explicabo inventore.</p> -->
           </div>
         </div>
       </div>
@@ -173,12 +176,11 @@
             </div>
             <div class="col-md-3 ml-auto" data-aos="fade-up" data-aos-delay="100">
               <div class="sticky-content">
-                <h3 id="work-title" class="h3">Boxed Water</h3>
-                <p id="work-category" class="mb-4"><span class="text-muted">Design</span></p>
+                <h3 id="work-title" class="h3"></h3>
+                <p id="work-category" class="mb-4"><span class="text-muted"></span></p>
 
                 <div class="mb-5">
-                  <p id="work-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores illo, id recusandae molestias
-                    illum unde pariatur, enim tempora.</p>
+                  <p id="work-description"></p>
                 </div>
 
                 <!-- Display stores information -->
@@ -196,7 +198,7 @@
                   </table>
                 </div>
 
-                <p><a href="#" class="readmore">Visit Website</a></p>
+                <!-- <p><a href="#" class="readmore">Visit Website</a></p> -->
               </div>
             </div>
           </div>
