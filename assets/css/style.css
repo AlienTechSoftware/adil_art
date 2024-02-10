@@ -507,3 +507,12 @@ h6,
   width: auto;
   height: 120px;
 }
+
+.work-item, .work-item * {
+  cursor: pointer;
+}
+
+.pointer-cursor {
+  cursor: pointer;
+}
+

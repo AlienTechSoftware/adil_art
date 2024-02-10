@@ -81,6 +81,7 @@
         var nameCell = document.createElement('td');
         var priceCell = document.createElement('td');
         var actionCell = document.createElement('td');
+        var notesCell = document.createElement('td');
   
         // Set content for the cells
         // nameCell.innerHTML = `<img src="${store.img}" alt="${store.name}" style="max-width: 50px; max-height: 50px;"/><p>${store.name}</p>`;
@@ -94,10 +95,13 @@
         buyLink.className = "readmore";
         buyLink.textContent = 'Buy on ' + store.name;
         actionCell.appendChild(buyLink);
+
+        notesCell.innerText = store.notes
   
         row.appendChild(nameCell);
         row.appendChild(priceCell);
         row.appendChild(actionCell);
+        row.appendChild(notesCell);
   
         return row;
       }
@@ -118,43 +122,13 @@
   
 
   <!-- ======= Navbar ======= -->
-  <div class="collapse navbar-collapse custom-navmenu" id="main-navbar">
-    <div class="container py-2 py-md-5">
-      <div class="row align-items-start">
-        <div class="col-md-2">
-          <ul class="custom-menu">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About Me</a></li>
-            <li><a href="services.html">Services</a></li>
-            <li class="active"><a href="works.html">Works</a></li>
-            <li><a href="contact.html">Contact</a></li>
-          </ul>
-        </div>
-        <div class="col-md-6 d-none d-md-block  mr-auto">
-          <div class="tweet d-flex">
-            <span class="bi bi-twitter text-white mt-2 mr-3"></span>
-            <div>
-              <p><em>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam necessitatibus incidunt ut officiis explicabo inventore. <br> <a href="#">t.co/v82jsk</a></em></p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4 d-none d-md-block">
-          <h3>Hire Me</h3>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam necessitatibus incidunt ut officiisexplicabo inventore. <br> <a href="#">myemail@gmail.com</a></p>
-        </div>
-      </div>
-
-    </div>
+<!-- ======= Navbar ======= -->
+<nav class="navbar navbar-expand-lg navbar-light custom-navbar">
+  <div id="main" class="container">
+    <a class="navbar-brand" href="./index.html"><img src="assets\img\Brand.png"></a>
   </div>
-
-  <nav class="navbar navbar-light custom-navbar">
-    <div class="container">
-      <a class="navbar-brand" href="index.html"><img src="assets\img\Brand.png"></img></a>
-      <a href="#" class="burger" data-bs-toggle="collapse" data-bs-target="#main-navbar">
-        <span></span>
-      </a>
-    </div>
-  </nav>
+</nav>
+<!-- End Navbar -->
 
   <main id="main">
 
@@ -192,6 +166,7 @@
                         <th>Store</th>
                         <th>Price</th>
                         <th>Action</th>
+                        <th>Notes</th>
                       </tr>
                     </thead>
                     <tbody id="selling-stores"></tbody>
