@@ -496,88 +496,85 @@ jsonData.forEach(function(itemData) {
 
 <!-- === Contact === -->
 
-
-<section  id="contact" class="section pb-5">
+<section id="contact" class="section pb-5">
   <div class="container">
-
-    <div class="col-md-6" data-aos="fade-up">
-      <h2>Contact</h2>
-      <p class="mb-0">I can do custom painting, or calligraphy.</p>
-    
-      <table class="table table-borderless mt-4">
-        <tbody>
-          <tr>
-            <td>
-              <img src="assets/originals/calligraphy/0001.jpg" alt="regular name" width="100">
-            </td>
-            <td>
-              <strong>Simple calligraphy:</strong><br>
-              One or more words calligraphy, in the font you like<br>
-              <strong>Price:</strong> $25
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <img src="assets/originals/design/0001.jpg" alt="fancy name" width="100">
-            </td>
-            <td>
-              <strong>Fancy calligraphy:</strong><br>
-              One or more words calligraphy, in custom forme you like<br>
-              <strong>Price:</strong> $50
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <img src="assets/originals/logo/0001.jpg" alt="Sample 3" width="100">
-            </td>
-            <td>
-              <strong>Logo design:</strong><br>
-              Contact me for details<br>
-              <strong>Price:</strong> $100
-            </td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-    
-
-    </div>
-
     <div class="row">
+
+      <div class="col-md-6" data-aos="fade-up">
+        <h2>Contact</h2>
+        <p class="mb-0">I can do custom painting, or calligraphy.</p>
+    
+        <table class="table table-borderless mt-4">
+          <tbody>
+            <tr>
+              <td>
+                <img src="assets/originals/calligraphy/0001.jpg" alt="regular name" width="100">
+              </td>
+              <td>
+                <strong>Simple calligraphy:</strong><br>
+                One or more words calligraphy, in the font you like<br>
+                <strong>Price:</strong> $25
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <img src="assets/originals/design/0001.jpg" alt="fancy name" width="100">
+              </td>
+              <td>
+                <strong>Fancy calligraphy:</strong><br>
+                One or more words calligraphy, in custom forme you like<br>
+                <strong>Price:</strong> $50
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <img src="assets/originals/logo/0001.jpg" alt="Sample 3" width="100">
+              </td>
+              <td>
+                <strong>Logo design:</strong><br>
+                Contact me for details<br>
+                <strong>Price:</strong> $100
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
       <div class="col-md-6 mb-5 mb-md-0" data-aos="fade-up">
 
-        <form action="forms/contact.php" method="post" role="form" class="php-email-form">
-
+        <form action="https://formspree.io/your_email_address_here" method="post" role="form" class="php-email-form" enctype="multipart/form-data">
           <div class="row gy-3">
             <div class="col-md-6 form-group">
               <label for="name">Name</label>
               <input type="text" name="name" class="form-control" id="name" required>
             </div>
             <div class="col-md-6 form-group">
-              <label for="name">Email</label>
+              <label for="email">Email</label>
               <input type="email" class="form-control" name="email" id="email" required>
             </div>
             <div class="col-md-12 form-group">
-              <label for="name">Subject</label>
+              <label for="subject">Subject</label>
               <input type="text" class="form-control" name="subject" id="subject" required>
             </div>
             <div class="col-md-12 form-group">
-              <label for="name">Message</label>
-              <textarea class="form-control" name="message" cols="30" rows="10" required></textarea>
+              <label for="message">Message</label>
+              <textarea class="form-control" name="message" id="message" cols="30" rows="10" required></textarea>
             </div>
-
+            <div class="col-md-12 form-group">
+              <label for="file">Upload File</label>
+              <input type="file" class="form-control" name="file" id="file">
+            </div>
             <div class="col-md-12 my-3">
               <div class="loading">Loading</div>
               <div class="error-message"></div>
               <div class="sent-message">Your message has been sent. Thank you!</div>
             </div>
-
             <div class="col-md-6 mt-0 form-group">
               <input type="submit" class="readmore d-block w-100" value="Send Message">
             </div>
           </div>
-
         </form>
+        
 
       </div>
 
@@ -599,14 +596,11 @@ jsonData.forEach(function(itemData) {
       </div>
 
     </div>
-
   </div>
-
 </section>
 
-
-
 <!--- End Contact Section -->
+
   
   </main><!-- End #main -->
 
